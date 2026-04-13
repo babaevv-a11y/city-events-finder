@@ -1,32 +1,26 @@
 # City Events Finder
 
-City Events Finder is a web application that lets a user search for upcoming city events and related venues by entering a city name.
+This cloud-based web application allows users to search for events in a city.
 
-## Features
-- Search by city
-- Pulls data from multiple external APIs. From 3 to be exact
-- Normalizes event data into one format
-- Removes duplicate results
-- Sorts results by date
-- Includes a `/health` endpoint for deployment health checks
-
-## Tech Stack
-- Node.js
-- Express
-- HTML/CSS/JavaScript
+# Technologies Used
+- Node.js (Express)
 - Docker
 - Google Cloud Run
-- External HTTP(S) Load Balancer
+- Google Artifact Registry
+- Google Cloud Load Balancer
+- Ticketmaster API
+- Google Places API
+- Google Geocoding API
 
-## Local Run
-1. Install dependencies:
-   npm install
+# Features
+- Search for events by city
+- Aggregates data from multiple APIs
+- Removes duplicate results
+- Sorts events by date
+- Health check endpoint (/health)
 
-2. Start the app:
-   npm start
+# Deployment
+The application is containerized using Docker, deployed to Google Cloud Run, and exposed via a Global External Application Load Balancer.
 
-3. Open in browser:
-   http://localhost:8080
-
-4. Health check:
-   http://localhost:8080/health
+# Security
+API keys are stored using environment variables and are not included in the source code.
